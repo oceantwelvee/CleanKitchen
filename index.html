@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CleanKitchen</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <h1 class="clean">Clean<h1 class="kitchen">Kitchen</h1></h1>
+        <span><p>Georgia</p></span>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li class="delivery"><a href="#">Доставка питания</a></li>
+        </ul>
+      </nav>
+      <div class="header-user">
+        <a href="#" id="login-btn">Вход</a> / <a href="#" id="register-btn">Регистрация</a>
+      </div>
+    </header>
+
+    <!-- AUTH and Registration -->
+       <!-- Блок для входа -->
+<div id="login-modal" class="myModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Вход</h2>
+    <form>
+      <label for="email">Почта</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Войти</button>
+      <p>или</p>
+      <a href="#">Вход через Google</a>
+    </form>
+  </div>
+</div>
+
+<!-- Блок для регистрации -->
+ <div id="register-modal" class="myModal">
+  <div class="modal-content">
+    <span class="close-reg">&times;</span>
+    <h2>Регистрация</h2>
+    <form>
+      <label for="firstName">Имя</label>
+      <input type="text" id="firstName" name="firstName" required>
+      <label for="lastName">Фамилия</label>
+      <input type="text" id="lastName" name="lastName" required>
+      <label for="emailReg">Почта</label>
+      <input type="email" id="emailReg" name="emailReg" required>
+      <label for="phone">Телефонный номер</label>
+      <input type="tel" id="phone2" name="phone" placeholder=" +995" required>
+      <label for="passwordReg">Пароль</label>
+      <input type="password" id="passwordReg" name="passwordReg" required>
+      <label for="passwordReg2">Повторите пароль</label>
+      <input type="password" id="passwordReg2" name="passwordReg2" required>
+      <button type="submit">Зарегистрироваться</button>
+      <p>или</p>
+      <a href="#">Регистрация через Google</a>
+    </form>
+  </div>
+</div> 
+
+    <!-- Modal Page for delivery -->
+
+    <div class="modal-overlay">
+        <div class="modal">
+          <h2>Почему мы ?</h2>
+          <p>Мы гарантируем быструю доставку свежей еды, чтобы вы могли наслаждаться ею вкусом в самое короткое время. Наша команда курьеров находится всегда на связи, и мы стараемся доставлять заказы как можно быстрее и более эффективно. Благодаря нашей оптимизированной системе заказов и маршрутизации, вы можете быть уверены, что ваша еда прибудет к вам вовремя и в идеальном состоянии.</p>
+          <p class="application">Оставьте заявку и мы сразу свяжемся с вами!</p>
+          <form>
+            <input type="text" placeholder="Имя и фамилия">
+            <input type="email"  placeholder="Email">
+            <input type="tel" placeholder="Телефон">
+            <input type="url" placeholder="Ваш адрес">
+            <button>Отправить</button>
+          </form>
+          <button class="close-modal">Закрыть</button>
+        </div>
+      </div>
+
+    <!-- Sliders and Menu -->
+    <div class="slider-menu-container">
+      <div class="slider-container">
+        <div class="slide active">
+          <img src="img/tabs/vegy.jpg" alt="Fitness" />
+
+          <div class="menu-description">
+            <h2>Фитнес</h2>
+            <p>
+              Меню "Фитнес" специально разработано для тех, кто следит за своим
+              здоровьем и формой. Оно включает в себя богатый набор белков,
+              овощей и здоровых углеводов, чтобы помочь вам достичь своих
+              фитнес-целей. Насладитесь вкусными блюдами, которые помогут вам
+              почувствовать себя здоровым и энергичным в течение всего дня.
+            </p>
+            <a href="#" class="btn">Заказать</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/tabs/hamburger.jpg" alt="Premium" />
+
+          <div class="menu-description">
+            <h2>Премиум</h2>
+            <p>
+              Меню “Премиум” - мы используем не только красивый дизайн упаковки,
+              но и качественное исполнение блюд. Красная рыба, морепродукты,
+              фрукты - ресторанное меню без похода в ресторан!
+            </p>
+            <a href="#" class="btn">Заказать</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/tabs/post.jpg" alt="Post" />
+
+          <div class="menu-description">
+            <h2>Постное</h2>
+            <p>
+              Наше специальное “Постное меню” - это тщательный подбор
+              ингредиентов: полное отсутствие продуктов животного происхождения.
+              Полная гармония с собой и природой в каждом элементе! Все будет
+              Ом!
+            </p>
+            <a href="#" class="btn">Заказать</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/tabs/elite.jpg" alt="Balanced" />
+
+          <div class="menu-description">
+            <h2>Сбалансированное</h2>
+            <p>
+              Меню "Сбалансированное" - это соответствие вашего рациона всем
+              научным рекомендациям. Мы тщательно просчитываем вашу потребность
+              в к/б/ж/у и создаем лучшие блюда для вас.
+            </p>
+            <a href="#" class="btn">Заказать</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/tabs/muslim2.jpg" alt="muslim" />
+
+          <div class="menu-description">
+            <h2>Для Мусульман</h2>
+            <p>
+              Для мусульман: это меню, которое соответствует исламским пищевым
+              правилам, таким как запрет на употребление свинины и алкоголя.
+              Обычно такое меню приготавливается с использованием халяльных
+              продуктов и может быть как постным, так и сбалансированным.
+            </p>
+            <a href="#" class="btn">Заказать</a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-container">
+        <p>Выберите стиль питания</p>
+        <ul class="menu">
+          <li class="menu-item active" data-slide="1">Фитнес</li>
+          <li class="menu-item" data-slide="2">Премиум</li>
+          <li class="menu-item" data-slide="3">Постное</li>
+          <li class="menu-item" data-slide="4">Сбалансированное</li>
+          <li class="menu-item" data-slide="5">Для мусульман</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="about-us">
+      <div class="about-us-content">
+        <h2>Что мы можем вам предложить</h2>
+        <p>
+          В нашей компании мы предлагаем только самые качественные и свежие
+          продукты. Наша цель - помочь вам наладить здоровое питание и получать
+          удовольствие от еды. Мы заботимся о наших клиентах и стараемся сделать
+          все возможное, чтобы удовлетворить их потребности.
+        </p>
+      </div>
+    </div>
+    <div class="fast-and-healthy">
+      <h2>Быстро и полезно</h2>
+      <p>
+        Готовить дома — скучно и не всегда удается приготовить что-то вкусное и
+        полезное. Мы предлагаем готовые блюда на день или на неделю, которые
+        сбалансированы по калориям и содержанию питательных веществ. Так вы
+        сможете заботиться о своем здоровье, не тратя на это много времени и
+        сил.
+      </p>
+    </div>
+
+    <div class="center-block">
+      <h2>Правильный рацион</h2>
+      <p>
+        Сбалансированный рацион – залог здоровья и хорошего самочувствия. Наш
+        сервис поможет составить для вас индивидуальный план питания, учитывая
+        вашу активность и потребности организма.
+      </p>
+      <a href="#" class="button">Заказать рацион</a>
+    </div>
+
+    <!-- KG Calculator -->
+    <div class="calorie-calculator">
+      <h2>Калькулятор калорий</h2>
+      <form>
+        <div class="form-group">
+          <label for="gender">Пол</label>
+          <select id="gender" name="gender">
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="age">Возраст</label>
+          <input type="number" id="age" name="age" />
+        </div>
+        <div class="form-group">
+          <label for="height">Рост, см</label>
+          <input type="number" id="height" name="height" />
+        </div>
+        <div class="form-group">
+          <label for="weight">Вес, кг</label>
+          <input type="number" id="weight" name="weight" />
+        </div>
+        <div class="form-group">
+          <label for="activity-level">Уровень активности</label>
+          <select id="activity-level" name="activity-level">
+            <option value="1.2">Минимальный (сидячий образ жизни)</option>
+            <option value="1.375">
+              Низкий (легкая активность, занятия спортом 1-3 раза в неделю)
+            </option>
+            <option value="1.55">
+              Средний (умеренная активность, занятия спортом 3-5 раз в неделю)
+            </option>
+            <option value="1.725">
+              Высокий (интенсивные занятия спортом 6-7 раз в неделю)
+            </option>
+            <option value="1.9">
+              Очень высокий (ежедневные интенсивные тренировки)
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit">Рассчитать калории</button>
+        </div>
+      </form>
+      <div class="result">
+        <h3>Ваша суточная норма калорий:</h3>
+        <p id="calories"></p>
+      </div>
+    </div>
+
+    <!-- Menu block -->
+    <div class="menu-wrapper">
+      <div class="menu-item">
+        <img src="img/menu/sirnik.jpg" alt="" />
+        <h3>Завтрак</h3>
+        <p>
+          Сырники с кукурузной мукой, 322 ккал. Кукурузная мука в смеси с
+          творогом делает тесто для этих сырников одновременно плотным и
+          эластичным, оно отлично лепится и в готовом виде своей текстурой
+          напоминает сочный французский женуаз.
+        </p>
+        <p class="price">Price: $8.99</p>
+        <button class="order-button">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <!-- img -->
+        <img src="img/menu/obed.jpg" alt="" />
+
+        <h3>Обед</h3>
+        <p>
+          Авголемоно, 192 ккал. Классический греческий суп: куриный бульон,
+          яйца, лимонный сок.
+        </p>
+        <p class="price">Price: $12.99</p>
+        <button class="order-button">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <!-- img -->
+        <img src="img/menu/ujin.jpg" alt="" />
+
+        <h3>Обед</h3>
+        <p>
+          Стейк из тунца с брюссельской капустой, 380 ккал. Брюссельская капуста
+          неплохо переносит заморозку, поэтому не в сезон — с конца октября по
+          июль — можно смело использовать замороженную из пачки.
+        </p>
+        <p class="price">Price: $5.99</p>
+        <button class="order-button">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <!-- img -->
+        <img src="img/menu/vtornik-zavtrak.jpg" alt="" />
+
+        <h3>Вторник: Завтрак</h3>
+        <p>
+          Клюквенный крамбл с мюсли, 202 ккал. Низкокалорийный десерт, на
+          приготовление которого не надо тратить много денег, сил и времени..
+        </p>
+        <p class="price">Price: $9.99</p>
+        <button class="order-button">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <!-- img -->
+        <img src="img/menu/vtornik-zavtrak.jpg" alt="" />
+
+        <h3>Вторник: Завтрак</h3>
+        <p>
+          Клюквенный крамбл с мюсли, 202 ккал. Низкокалорийный десерт, на
+          приготовление которого не надо тратить много денег, сил и времени..
+        </p>
+        <p class="price">Price: $9.99</p>
+        <button class="order-button">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <!-- img -->
+        <img src="img/menu/vtornik-zavtrak.jpg" alt="" />
+
+        <h3>Вторник: Завтрак</h3>
+        <p>
+          Клюквенный крамбл с мюсли, 202 ккал. Низкокалорийный десерт, на
+          приготовление которого не надо тратить много денег, сил и времени..
+        </p>
+        <p class="price">Price: $9.99</p>
+        <button class="order-button">Order Now</button>
+      </div>
+    </div>
+
+    <button id="show-more">Другие блюда</button>
+
+    <!-- Скрытые блюда -->
+    <div id="more-dishes" style="display: none">
+      <div class="menu-wrapper">
+        <div class="menu-item">
+          <!-- img -->
+          <img src="img/menu/vtornik-obed.jpg" alt="" />
+
+          <h3>Вторник: Обед</h3>
+          <p>
+            Салат с тунцом и фасолью по-тоскански, 301 ккал. Для этого салата
+            нужна фасоль сорта каннеллини — у нее нежная, чуть маслянистая плоть
+            и ореховая нота во вкусе. А еще этот сорт хорошо сохраняет форму..
+          </p>
+          <p class="price">Price: $5.99</p>
+          <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="menu-item">
+          <!-- img -->
+          <img src="img/menu/vtornik-ujin.jpg" alt="" />
+
+          <h3>Вторник: Ужин</h3>
+          <p>
+            Котлеты из индейки, 986 ккал. Отличным гарниром к таким котлетам
+            будет картофельное пюре с горстью рукколы. Летом рукколу можно
+            заменить шпинатом или щавелем.
+          </p>
+          <p class="price">Price: $7.99</p>
+          <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="menu-item">
+          <!-- img -->
+          <img src="img/menu/sreda-zavtrak.jpg" alt="" />
+          <h3>Среда: Завтрак</h3>
+          <p>
+            Омлет с пряными травами, 357 ккал. Список обычно добавляемых в омлет
+            трав чрезвычайно широк и зависит от сезона. Впрочем, петрушка бывает
+            там практически всегда.
+          </p>
+          <p class="price">Price: $7.99</p>
+          <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="menu-item">
+          <!-- img -->
+          <img src="img/menu/sreda-obed.jpg" alt="" />
+          <h3>Среда: Обед</h3>
+          <p>
+            Паровой куриный рулет с мандаринами и черносливом, 185 ккал. Главная
+            прелесть этого рулета заключается в том, что начинка в нем может
+            быть какой угодно: овощной, грибной или, как тут, фруктовой. Куриное
+            мясо вообще неплохо сочетается со сладкими фруктами — например, с
+            грушами или абрикосами, которые для усиления вкуса лучше брать не в
+            свежем, а сушеном виде. А чтобы сбалансировать сладость, можно
+            добавлять побольше любимых специй.
+          </p>
+          <p class="price">Price: $7.99</p>
+          <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="menu-item">
+          <!-- img -->
+          <img src="img/menu/sreda-ujin.jpg" alt="" />
+          <h3>Среда: Ужин</h3>
+          <p>
+            Маринованный стейк, 843 ккал. Стейк для этого рецепта рекомендуется
+            мариновать сутки, чтобы мясо впитало в себя все ароматы специй. Но
+            можно и полдня. Мясо при этом надо держать в холодильнике.
+          </p>
+          <p class="price">Price: $7.99</p>
+          <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="menu-item">
+          <!-- img -->
+          <img src="img/menu/sreda-ujin.jpg" alt="" />
+          <h3>Среда: Ужин</h3>
+          <p>
+            Маринованный стейк, 843 ккал. Стейк для этого рецепта рекомендуется
+            мариновать сутки, чтобы мясо впитало в себя все ароматы специй. Но
+            можно и полдня. Мясо при этом надо держать в холодильнике.
+          </p>
+          <p class="price">Price: $7.99</p>
+          <button class="order-button">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chatbot block -->
+    <div class="faq-block">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="faq-item">
+        <div class="question">Как сделать заказ?</div>
+        <div class="answer">Для заказа еды вы можете воспользоваться нашим онлайн-меню. Нужно выбрать блюда и добавить их в корзину, после чего оформить заказ.</div>
+      </div>
+      <div class="faq-item">
+        <div class="question">Какие способы оплаты вы принимаете?</div>
+        <div class="answer">Мы принимаем оплату наличными и банковской картой. При заказе через сайт вы можете оплатить онлайн.</div>
+      </div>
+      <div class="faq-item">
+        <div class="question">Как долго будет доставка?</div>
+        <div class="answer">Время доставки зависит от вашего местоположения и загруженности кухни. Обычно доставка занимает от 30 до 60 минут.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question">Ваше меню содержит блюда для людей с диетическими ограничениями?</div>
+        <div class="answer">Да, у нас есть специальное меню для людей с диетическими ограничениями, таких как вегетарианцы, веганы и люди, страдающие аллергией на определенные продукты.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question">Как мне изменить или отменить заказ?</div>
+        <div class="answer"> Вы можете связаться с нами по телефону или отправить нам сообщение на электронную почту, чтобы изменить или отменить заказ. Если вы уже оплатили заказ, мы вернем вам деньги.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question">Как часто вы обновляете свое меню?</div>
+        <div class="answer">Мы стараемся обновлять наше меню каждый сезон, чтобы предложить нашим клиентам новые вкусы и свежие блюда.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question">Как часто вы проверяете качество своих блюд?</div>
+        <div class="answer">Мы проверяем качество наших блюд каждый день, чтобы убедиться, что они соответствуют нашим стандартам качества. Мы также проводим регулярные проверки со стороны наших экспертов по питанию, чтобы убедиться, что наши блюда питательны и здоровые.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question">Какие услуги вы предоставляете для крупных мероприятий или вечеринок?</div>
+        <div class="answer">Мы предоставляем услуги кейтеринга для крупных мероприятий и вечеринок. Мы можем предложить индивидуальное меню и организовать доставку и сервировку блюд на месте проведения мероприятия.</div>
+      </div>
+    </div>
+    
+
+    <!-- Feedback Content -->
+
+    <div class="contact-us">
+      <h2>Связаться с нами</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Имя и Фамилия</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Почта</label>
+          <input type="email" id="email2" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-about">
+          <h3>О нас</h3>
+          <p>
+            Мы - компания, которая занимается созданием уникальных и
+            качественных блюд для наших клиентов. Мы привержены к высокому
+            качеству и свежести наших продуктов, и стремимся сделать каждый
+            прием пищи удовлетворительным и незабываемым. Мы искренне верим, что
+            здоровое питание должно быть доступно каждому, и поэтому наша миссия
+            - предложить нашим клиентам лучшие блюда по доступной цене. Наша
+            команда состоит из профессиональных поваров и опытных работников,
+            которые уделяют максимум внимания каждому блюду, чтобы каждый наш
+            клиент получил наилучший опыт приема пищи. Мы гордимся тем, что наша
+            работа приносит радость и удовлетворение нашим клиентам, и мы
+            стремимся продолжать нашу миссию в будущем.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h3>Ссылки</h3>
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Меню</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Адресс</a><p>Rustaveli ave 3000 st.23</p></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Социальные сети</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        <p>© 2023 Все права защищены</p>
+      </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
