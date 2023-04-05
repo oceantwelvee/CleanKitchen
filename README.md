@@ -1,2 +1,0 @@
-# CleanKitchen
-App about food
